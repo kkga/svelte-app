@@ -6,7 +6,7 @@
 
   function onClick() {
     dispatch("message", {
-      label: label,
+      value: label,
     });
   }
 </script>

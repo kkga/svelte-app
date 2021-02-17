@@ -3,7 +3,7 @@
   import Button from "./Button.svelte";
 
   function handleMessage(event) {
-    lastClicked.set(event.detail.label);
+    lastClicked.set(event.detail.value);
   }
 </script>
 
@@ -12,6 +12,12 @@
   <Button on:message={handleMessage} label="1" />
   <Button on:message={handleMessage} label="2" />
   <Button on:message={handleMessage} label="3" />
+
+  <hr />
+
+  {#if $lastClicked === "1"}
+    <div>one</div>
+  {/if}
 </main>
 
 <style>
